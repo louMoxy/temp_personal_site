@@ -3,15 +3,8 @@ import Link from 'gatsby-link'
 
 const Header = (props) => (
     <header id="header" className="alt">
-        <Link to="/" className="logo"><strong>Forty</strong> <span>by HTML5 UP</span></Link>
-        <nav>
-            <a className="menu-link" onClick={props.onToggleMenu} href="javascript:;">Menu</a>
-        </nav>
+        <div className="logo"><strong>Louise</strong> <span>Moxhay</span></div>
     </header>
 )
-
-Header.propTypes = {
-    onToggleMenu: React.PropTypes.func
-}
 
 export default Header

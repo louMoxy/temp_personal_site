@@ -4,18 +4,23 @@ const Contact = (props) => (
     <section id="contact">
         <div className="inner">
             <section>
-                <form method="post" action="#">
+                <form
+                method="post"
+                data-netlify="true"
+                name="contact"
+                onSubmit={props.handleSubmit}
+                >
                     <div className="field half first">
                         <label htmlFor="name">Name</label>
-                        <input type="text" name="name" id="name" />
+                        <input type="text" name="name" id="name" onChange={props.handleChange} required/>
                     </div>
                     <div className="field half">
                         <label htmlFor="email">Email</label>
-                        <input type="text" name="email" id="email" />
+                        <input type="text" name="email" id="email" required/>
                     </div>
                     <div className="field">
                         <label htmlFor="message">Message</label>
-                        <textarea name="message" id="message" rows="6"></textarea>
+                        <textarea name="message" id="message" rows="6" required></textarea>
                     </div>
                     <ul className="actions">
                         <li><input type="submit" value="Send Message" className="special" /></li>
@@ -28,23 +33,21 @@ const Contact = (props) => (
                     <div className="contact-method">
                         <span className="icon alt fa-envelope"></span>
                         <h3>Email</h3>
-                        <a href="#">information@untitled.tld</a>
+                        <a href="mailto:louisemoxy@gmail.com">louisemoxy@gmail.com</a>
                     </div>
                 </section>
                 <section>
                     <div className="contact-method">
-                        <span className="icon alt fa-phone"></span>
-                        <h3>Phone</h3>
-                        <span>(000) 000-0000 x12387</span>
+                        <span className="icon alt fa-github"></span>
+                        <h3>Github</h3>
+                        <a href="https://github.com/louMoxy" target="_blank">https://github.com/louMoxy</a>
                     </div>
                 </section>
                 <section>
                     <div className="contact-method">
-                        <span className="icon alt fa-home"></span>
-                        <h3>Address</h3>
-                        <span>1234 Somewhere Road #5432<br />
-                        Nashville, TN 00000<br />
-                        United States of America</span>
+                        <span className="icon alt fa-codepen"></span>
+                        <h3>Codepen</h3>
+                        <a href="https://codepen.io/moxy/" target="_blank">https://codepen.io/moxy/</a>
                     </div>
                 </section>
             </section>
