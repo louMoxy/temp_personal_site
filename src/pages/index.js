@@ -1,14 +1,14 @@
-import React from 'react'
-import Link from 'gatsby-link'
-import Helmet from 'react-helmet'
-import Banner from '../components/Banner'
+import React from 'react';
+import Link from 'gatsby-link';
+import Helmet from 'react-helmet';
+import Banner from '../components/Banner';
 
-import pic01 from '../assets/images/pic01.jpg'
-import pic02 from '../assets/images/pic02.jpg'
-import pic03 from '../assets/images/pic03.jpg'
-import pic04 from '../assets/images/pic04.jpg'
-import pic05 from '../assets/images/pic05.jpg'
-import pic06 from '../assets/images/pic06.jpg'
+import africanChef from '../assets/images/The_African_Chef-thumbnail.jpg';
+import veganCookbook from '../assets/images/vegan-cookbook-thumbnail.jpg';
+import chessPiece from '../assets/images/chess-piece-thumbnail.jpg';
+import rentAHome from '../assets/images/rent-a-home-thumbnail.jpg';
+import naomiDavies from '../assets/images/naomi-davies-thumbnail.jpg';
+import codepen from '../assets/images/codepen-thumbnail.jpg';
 
 class HomeIndex extends React.Component {
     render() {
@@ -26,42 +26,42 @@ class HomeIndex extends React.Component {
 
                 <div id="main">
                     <section id="work" className="tiles">
-                        <article style={{backgroundImage: `url(${pic01})`}}>
+                        <article style={{backgroundImage: `url(${africanChef})`}}>
                             <header className="major">
                                 <h3>African Chef</h3>
                                 <p>A Shopify based e-commerce site</p>
                             </header>
                             <Link to="/landing" className="link primary"></Link>
                         </article>
-                        <article style={{backgroundImage: `url(${pic02})`}}>
+                        <article style={{backgroundImage: `url(${veganCookbook})`}}>
                             <header className="major">
                                 <h3>Vegan Cookbook</h3>
                                 <p>A Jamstack CMS recipe site</p>
                             </header>
                             <Link to="/landing" className="link primary"></Link>
                         </article>
-                        <article style={{backgroundImage: `url(${pic03})`}}>
+                        <article style={{backgroundImage: `url(${chessPiece})`}}>
                             <header className="major">
                                 <h3>3D Modelling</h3>
                                 <p>3D modelling and animation using blender</p>
                             </header>
                             <Link to="/landing" className="link primary"></Link>
                         </article>
-                        <article style={{backgroundImage: `url(${pic04})`}}>
+                        <article style={{backgroundImage: `url(${rentAHome})`}}>
                             <header className="major">
                                 <h3>Rent A Home Services</h3>
                                 <p>A wordpress based property listing subscription site</p>
                             </header>
                             <Link to="/landing" className="link primary"></Link>
                         </article>
-                        <article style={{backgroundImage: `url(${pic05})`}}>
+                        <article style={{backgroundImage: `url(${naomiDavies})`}}>
                             <header className="major">
                                 <h3>Naomi Davies Design</h3>
                                 <p>A wordpress based e-commerce site</p>
                             </header>
                             <Link to="/landing" className="link primary"></Link>
                         </article>
-                        <article style={{backgroundImage: `url(${pic06})`}}>
+                        <article style={{backgroundImage: `url(${codepen})`}}>
                             <header className="major">
                                 <h3>Codepen</h3>
                                 <p>Examples of code experiments which include D3 and three.js</p>
