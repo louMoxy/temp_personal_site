@@ -27,46 +27,52 @@ class HomeIndex extends React.Component {
                 <div id="main">
                     <section id="work" className="tiles">
                         <article style={{backgroundImage: `url(${africanChef})`}}>
-                            <header className="major">
-                                <h3>African Chef</h3>
-                                <p>A Shopify based e-commerce site</p>
-                            </header>
-                            <Link to="/landing" className="link primary"></Link>
+                            <a href="https://www.theafricanchef.com" target="_blank">
+                                <header className="major">
+                                    <h3>African Chef</h3>
+                                    <p>A Shopify based e-commerce site</p>
+                                </header>
+                            </a>
                         </article>
                         <article style={{backgroundImage: `url(${veganCookbook})`}}>
-                            <header className="major">
-                                <h3>Vegan Cookbook</h3>
-                                <p>A Jamstack CMS recipe site</p>
-                            </header>
-                            <Link to="/landing" className="link primary"></Link>
+                            <a href="http://vegan-cookbook.co.uk/" target="_blank">
+                                <header className="major">
+                                    <h3>Vegan Cookbook</h3>
+                                    <p>A Jamstack CMS recipe site</p>
+                                </header>
+                                </a>
                         </article>
                         <article style={{backgroundImage: `url(${chessPiece})`}}>
-                            <header className="major">
-                                <h3>3D Modelling</h3>
-                                <p>3D modelling and animation using blender</p>
-                            </header>
-                            <Link to="/landing" className="link primary"></Link>
+                            <a href="https://sketchfab.com/LMoxy" target="_blank">
+                                <header className="major">
+                                    <h3>3D Modelling</h3>
+                                    <p>3D modelling and animation using blender</p>
+                                </header>
+                            </a>
                         </article>
                         <article style={{backgroundImage: `url(${rentAHome})`}}>
-                            <header className="major">
-                                <h3>Rent A Home Services</h3>
-                                <p>A wordpress based property listing subscription site</p>
-                            </header>
-                            <Link to="/landing" className="link primary"></Link>
+                            <a href="http://rentahome.services/property/" target="_blank">
+                                <header className="major">
+                                    <h3>Rent A Home Services</h3>
+                                    <p>A wordpress based property listing subscription site</p>
+                                </header>
+                            </a>
                         </article>
                         <article style={{backgroundImage: `url(${naomiDavies})`}}>
-                            <header className="major">
-                                <h3>Naomi Davies Design</h3>
-                                <p>A wordpress based e-commerce site</p>
-                            </header>
-                            <Link to="/landing" className="link primary"></Link>
+                            <a href="http://www.naomidaviesjewellery.co.uk/shop/" target="_blank">
+                                <header className="major">
+                                    <h3>Naomi Davies Design</h3>
+                                    <p>A wordpress based e-commerce site</p>
+                                </header>
+                            </a>
                         </article>
-                        <article style={{backgroundImage: `url(${codepen})`}}>
-                            <header className="major">
-                                <h3>Codepen</h3>
-                                <p>Examples of code experiments which include D3 and three.js</p>
-                            </header>
-                            <Link to="/landing" className="link primary"></Link>
+                            <article style={{backgroundImage: `url(${codepen})`}}>
+                            <a href="https://codepen.io/moxy/" target="_blank">
+                                <header className="major">
+                                    <h3>Codepen</h3>
+                                    <p>Examples of code experiments which include D3 and three.js</p>
+                                </header>
+                            </a>
                         </article>
                     </section>
                     <section id="two">

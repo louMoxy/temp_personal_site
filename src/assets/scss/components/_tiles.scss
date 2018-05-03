@@ -35,7 +35,9 @@
 			overflow: hidden;
 			position: relative;
 			width: 40%;
-
+			a {
+				border-bottom: none;
+			}
 			.image {
 				display: none;
 			}
