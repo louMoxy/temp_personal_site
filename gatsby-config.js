@@ -41,7 +41,7 @@ module.exports = {
         head: true,
         exclude: ["/admin/*"]
       },
-    }
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-react-helmet`,
