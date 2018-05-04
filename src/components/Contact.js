@@ -1,28 +1,58 @@
 import React from 'react'
 
-const Contact = (props) => (
-    <section id="contact">
+function encode(data) {
+    return Object.keys(data)
+        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+        .join("&");
+  }
+
+export default class Contact extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            thanks: false
+        };
+      }
+    
+      handleChange = (e) => {
+        this.setState({[e.target.name]: e.target.value});
+      }
+    
+      handleSubmit = e => {
+        fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: encode({ "form-name": "contact", ...this.state })
+        })
+          .then(() => this.setState({'thanks': 'Thanks for getting in contact.'}))
+          .catch(error => alert(error));
+    
+        e.preventDefault();
+      };
+    render() {
+        return (
+        <section id="contact">
         <div className="inner">
             <section>
-                <p>{props.thanks}</p>
+                <p>{this.state.thanks}</p>
                 <form
                 method="post"
                 data-netlify="true"
                 name="contact"
-                onSubmit={props.handleSubmit}
-                hidden={(props.thanks ? true : false)}
+                onSubmit={this.handleSubmit}
+                hidden={(this.state.thanks ? true : false)}
                 >
                     <div className="field half first">
                         <label htmlFor="name">Name</label>
-                        <input type="text" name="name" id="name" onChange={props.handleChange} required/>
+                        <input type="text" name="name" id="name" onChange={this.handleChange} required/>
                     </div>
                     <div className="field half">
                         <label htmlFor="email">Email</label>
-                        <input type="text" name="email" id="email" onChange={props.handleChange} required/>
+                        <input type="email" name="email" id="email" onChange={this.handleChange} required/>
                     </div>
                     <div className="field">
                         <label htmlFor="message">Message</label>
-                        <textarea name="message" id="message" rows="6" onChange={props.handleChange} required></textarea>
+                        <textarea name="message" id="message" rows="6" onChange={this.handleChange} required></textarea>
                     </div>
                     <ul className="actions">
                         <li><input type="submit" value="Send Message" className="special" /></li>
@@ -54,7 +84,6 @@ const Contact = (props) => (
                 </section>
             </section>
         </div>
-    </section>
-)
-
-export default Contact
+    </section>);
+    }
+}
