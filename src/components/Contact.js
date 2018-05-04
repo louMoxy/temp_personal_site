@@ -55,7 +55,7 @@ export default class Contact extends React.Component {
                         <textarea name="message" id="message" rows="6" onChange={this.handleChange} required></textarea>
                     </div>
                     <ul className="actions">
-                        <li><button type="submit" value="Send Message" className="special"></button></li>
+                        <li><button type="submit" className="special">Send Message</button></li>
                         <li><input type="reset" value="Clear" /></li>
                     </ul>
                 </form>
