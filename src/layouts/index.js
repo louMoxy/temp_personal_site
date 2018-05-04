@@ -28,7 +28,7 @@ class Template extends React.Component {
         this.setState({[e.target.name]: e.target.value});
       }
     
-      handleSubmit = e => {
+    handleSubmit = e => {
         fetch("/", {
           method: "POST",
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -36,7 +36,6 @@ class Template extends React.Component {
         })
           .then(() => this.setState({'thanks': 'Thanks for getting in contact.'}))
           .catch(error => alert(error));
-    
         e.preventDefault();
       };
 
@@ -69,7 +68,10 @@ class Template extends React.Component {
                 <div id="wrapper">
                     <Header onToggleMenu={this.handleToggleMenu} />
                     {children()}
-                    <Contact handleChange={this.handleChange.bind(this)} handleSubmit={this.handleSubmit.bind(this)}/>
+                    <Contact handleChange={this.handleChange.bind(this)}
+                        handleSubmit={this.handleSubmit.bind(this)}
+                        thanks= {this.state.thanks}
+                        />
                     <Footer />
                 </div>
                 <Menu onToggleMenu={this.handleToggleMenu} />

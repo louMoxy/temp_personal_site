@@ -4,11 +4,13 @@ const Contact = (props) => (
     <section id="contact">
         <div className="inner">
             <section>
+                <p>{props.thanks}</p>
                 <form
                 method="post"
                 data-netlify="true"
                 name="contact"
                 onSubmit={props.handleSubmit}
+                hidden={(props.thanks ? true : false)}
                 >
                     <div className="field half first">
                         <label htmlFor="name">Name</label>
@@ -16,11 +18,11 @@ const Contact = (props) => (
                     </div>
                     <div className="field half">
                         <label htmlFor="email">Email</label>
-                        <input type="text" name="email" id="email" required/>
+                        <input type="text" name="email" id="email" onChange={props.handleChange} required/>
                     </div>
                     <div className="field">
                         <label htmlFor="message">Message</label>
-                        <textarea name="message" id="message" rows="6" required></textarea>
+                        <textarea name="message" id="message" rows="6" onChange={props.handleChange} required></textarea>
                     </div>
                     <ul className="actions">
                         <li><input type="submit" value="Send Message" className="special" /></li>
