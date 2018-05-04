@@ -38,7 +38,7 @@ export default class Contact extends React.Component {
                 <form
                 method="post"
                 data-netlify="true"
-                name="contact"
+                name="contactForm"
                 onSubmit={this.handleSubmit}
                 hidden={(this.state.thanks ? true : false)}
                 >
@@ -55,7 +55,7 @@ export default class Contact extends React.Component {
                         <textarea name="message" id="message" rows="6" onChange={this.handleChange} required></textarea>
                     </div>
                     <ul className="actions">
-                        <li><input type="submit" value="Send Message" className="special" /></li>
+                        <li><button type="submit" value="Send Message" className="special"></button></li>
                         <li><input type="reset" value="Clear" /></li>
                     </ul>
                 </form>
