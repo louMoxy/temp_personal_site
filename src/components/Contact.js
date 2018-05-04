@@ -42,9 +42,9 @@ export default class Contact extends React.Component {
                 data-netlify-honeypot="bot-field"
                 hidden={(this.state.thanks ? true : false)}
                 >
-                <label hidden>
-                    Don’t fill this out: <input name="bot-field" onChange={this.handleChange} />
-                </label>
+                <div hidden>
+                    <label>Don’t fill this out: <input name="bot-field" onChange={this.handleChange} /></label>
+                </div>
                     <div className="field half first">
                         <label htmlFor="name">Name</label>
                         <input type="text" name="name" id="name" onChange={this.handleChange} required/>
